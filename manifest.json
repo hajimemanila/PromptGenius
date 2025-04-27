@@ -1,0 +1,30 @@
+{
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'"
+  },
+  "manifest_version": 3,
+  "name": "Prompt Genius",
+  "version": "1.0",
+  "description": "AIプロンプト作成・管理・分析・改善のChrome拡張",
+  "action": {
+    "default_title": "Prompt Genius",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "permissions": ["storage", "sidePanel", "contextMenus"],
+  "host_permissions": ["https://api.openai.com/*", "https://*.googleapis.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
